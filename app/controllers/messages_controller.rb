@@ -1,8 +1,16 @@
 class MessagesController < ApplicationController
   def create
+    broadcast_message if message.save
   end
 
   private
+
+  def broadcast_message
+    ActionCable.server.broadcast 'messages',
+      message: message.content,
+      user: message.user.email
+    head :ok
+  end
 
   def message
     @message ||= Message.new.tap do |m|
