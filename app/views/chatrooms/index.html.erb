@@ -1,0 +1,4 @@
+<% current_user.chatrooms.each do |c| %>
+  <h1><%= c.topic %></h1>
+  <%= link_to 'Go to room', c %>
+<% end %>
