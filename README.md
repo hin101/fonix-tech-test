@@ -10,6 +10,7 @@
 - No validation as this is just a proof of concept
 - Used devise gem for login and register functionality
 - Integration test using RSpec and Capybara
+- No Integration test for devise as we should not be testing a library
 
 ## Specification
 
