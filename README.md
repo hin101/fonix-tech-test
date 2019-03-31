@@ -8,8 +8,8 @@
 ## Implementation Notes
 - The user gets assigned to the first chatroom after they sign in. To scale this, a screen can be built where users select the chatroom they want to subscribe to.
 - No validation as this is just a proof of concept
-- No controller tests as this is just a proof of concept
 - Used devise gem for login and register functionality
+- Integration test using RSpec and Capybara
 
 ## Specification
 

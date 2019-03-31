@@ -6,5 +6,5 @@ class User < ApplicationRecord
          :confirmable
 
   has_many :messages
-  has_many :chatrooms, through: :messages
+  has_many :chatrooms, -> { distinct }, through: :messages
 end
