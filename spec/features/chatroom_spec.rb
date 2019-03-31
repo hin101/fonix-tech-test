@@ -13,7 +13,7 @@ feature 'Chatroom' do
   end
 
   scenario 'user can send message in chatroom', js: true do
-    initialize_message
+    chatroom = initialize_message
     visit chatroom_path chatroom
     fill_in "message_content", with: 'test'
     click_button 'send'
